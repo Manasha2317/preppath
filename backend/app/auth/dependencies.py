@@ -14,8 +14,7 @@ from sqlalchemy.orm import Session
 from jose import JWTError
 from app.database import get_db
 from app.auth.service import decode_token, get_user_by_email
-
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login/form")
 
 def get_current_user(
     token: str = Depends(oauth2_scheme),
