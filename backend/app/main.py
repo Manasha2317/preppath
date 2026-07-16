@@ -9,6 +9,7 @@ from app.auth.router import router as auth_router
 from app.career_twin.router import router as twin_router
 from app.resume.router import router as resume_router
 from app.chat.router import router as chat_router
+from app.dashboard.router import router as dashboard_router
 
 app = FastAPI(
     title="PrepPath API",
@@ -39,6 +40,7 @@ app.include_router(auth_router, prefix="/api/v1")
 app.include_router(twin_router, prefix="/api/v1")
 app.include_router(resume_router, prefix="/api/v1")
 app.include_router(chat_router, prefix="/api/v1")
+app.include_router(dashboard_router, prefix="/api/v1")
 
 # Health check — first endpoint we test.
 # If this works, the server is running correctly.
