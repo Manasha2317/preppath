@@ -13,11 +13,11 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
-    OPENAI_API_KEY: str
     LANGCHAIN_TRACING_V2: bool = True
     LANGCHAIN_PROJECT: str = "preppath-dev"
     LANGCHAIN_API_KEY: str = ""
     ENVIRONMENT: str = "development"
+    GOOGLE_API_KEY: str = ""
 
     class Config:
         env_file = ".env"
